@@ -21,8 +21,6 @@ jobs:
           aws-region: eu-north-1
 
       - name: Deploy to S3
-        run: |
-          aws s3 sync . s3://hema-cloud-resume-2026-516909141746-eu-north-1-an \
-          --delete \
-          --exclude ".git/*" \
-          --exclude ".github/*"
+      run: |
+       aws s3 sync ./frontend s3://hema-cloud-resume-2026-516909141746-eu-north-1-an \
+       --delete
